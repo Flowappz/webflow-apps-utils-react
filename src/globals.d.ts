@@ -1,4 +1,4 @@
-declare module '*.css';
+declare module '*.css' {}
 
 declare module 'just-debounce' {
   const debounce: <T extends (...args: never[]) => unknown>(
