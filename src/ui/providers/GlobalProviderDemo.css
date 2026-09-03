@@ -1,0 +1,104 @@
+.demo-container {
+	padding: 1rem;
+	max-width: 600px;
+	margin: 0 auto;
+	background: var(--background1);
+	color: var(--text1);
+}
+
+.demo-container .start-demo {
+	text-align: center;
+	padding: 2rem;
+	border: 2px dashed var(--border2);
+	border-radius: var(--border-radius);
+	background: var(--background2);
+}
+
+.demo-container .demo-content {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.demo-container .context-section {
+	padding: 1rem;
+	border: 1px solid var(--border2);
+	border-radius: var(--border-radius);
+	background: var(--background2);
+}
+
+.demo-container .context-section h4 {
+	margin: 0 0 0.5rem 0;
+	color: var(--text1);
+	font-size: var(--font-size-large);
+	font-weight: var(--font-weight-medium);
+}
+
+.demo-container .context-section p {
+	margin: 0.25rem 0;
+	font-size: var(--font-size-small);
+	color: var(--text2);
+}
+
+.demo-container .button-group {
+	display: flex;
+	gap: 0.5rem;
+	margin-top: 0.75rem;
+}
+
+.demo-container .btn {
+	padding: var(--padding-small) var(--padding-regular);
+	border: none;
+	border-radius: var(--border-radius);
+	cursor: pointer;
+	font-size: var(--font-size-small);
+	font-weight: var(--font-weight-normal);
+
+	transition: all 0.2s ease;
+}
+
+.demo-container .btn--primary {
+	background: var(--actionPrimaryBackground);
+	color: var(--actionPrimaryText);
+	box-shadow: var(--boxShadows-action-colored);
+}
+
+.demo-container .btn--primary:hover {
+	background: var(--actionPrimaryBackgroundHover);
+	color: var(--actionPrimaryTextHover);
+}
+
+.demo-container .btn--secondary {
+	background: var(--background4);
+	color: var(--actionSecondaryText);
+	box-shadow: var(--boxShadows-action-secondary);
+}
+
+.demo-container .btn--secondary:hover {
+	background: var(--background5);
+	color: var(--actionSecondaryTextHover);
+}
+
+.demo-container .status-true {
+	color: var(--redText);
+	font-weight: var(--font-weight-medium);
+}
+
+.demo-container .status-false {
+	color: var(--greenText);
+	font-weight: var(--font-weight-medium);
+}
+
+.demo-container code {
+	background: var(--background3);
+	border: 1px solid var(--border2);
+	padding: var(--padding-tiny);
+	border-radius: var(--border-radius);
+	font-size: var(--font-size-small);
+	color: var(--text2);
+	display: block;
+	margin-top: var(--spacing-4);
+	white-space: pre-wrap;
+	max-height: 150px;
+	overflow-y: auto;
+}

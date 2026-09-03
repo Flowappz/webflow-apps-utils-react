@@ -1,0 +1,115 @@
+.demo-container {
+	padding: var(--spacing-24);
+
+	background: var(--background1);
+	color: var(--text1);
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.demo-container h3 {
+	color: var(--text1);
+	font-size: var(--font-size-large);
+	font-weight: var(--font-weight-medium);
+	margin: var(--spacing-16) 0 var(--spacing-8) 0;
+}
+
+.demo-container p {
+	color: var(--text2);
+	font-size: var(--font-size-small);
+	margin: var(--spacing-8) 0;
+}
+
+.demo-container .btn {
+	padding: var(--padding-small) var(--padding-regular);
+	border: none;
+	border-radius: var(--border-radius);
+	cursor: pointer;
+	font-size: var(--font-size-small);
+	font-weight: var(--font-weight-normal);
+
+	transition: all 0.2s ease;
+	margin: var(--spacing-8) 0;
+}
+
+.demo-container .btn--primary {
+	background: var(--actionPrimaryBackground);
+	color: var(--actionPrimaryText);
+	box-shadow: var(--boxShadows-action-colored);
+}
+
+.demo-container .btn--primary:hover {
+	background: var(--actionPrimaryBackgroundHover);
+	color: var(--actionPrimaryTextHover);
+}
+
+.demo-container .output-block {
+	background: var(--background2);
+	border: 1px solid var(--border2);
+	padding: var(--spacing-12);
+	margin-top: var(--spacing-12);
+	white-space: pre-wrap;
+	border-radius: var(--border-radius);
+	color: var(--text2);
+	font-size: var(--font-size-small);
+}
+
+.demo-container .output-block.small {
+	font-size: var(--font-size-small);
+}
+
+.demo-container .divider {
+	border: none;
+	border-top: 1px solid var(--border2);
+	margin: var(--spacing-32) 0;
+}
+
+.demo-container .examples-container,
+.demo-container .results-container {
+	margin-top: var(--spacing-16);
+}
+
+/* Dynamic HTML content styling */
+.examples-container > div {
+	display: grid;
+	gap: var(--spacing-12);
+}
+
+.coercion-example {
+	padding: var(--spacing-12);
+	border: 1px solid var(--border2);
+	border-radius: var(--border-radius);
+	background: var(--background2);
+}
+
+.performance-result {
+	background: var(--background2);
+	border: 1px solid var(--border2);
+	padding: var(--spacing-16);
+	border-radius: var(--border-radius);
+}
+
+.results-container > div {
+	background: var(--background2);
+	border: 1px solid var(--border2);
+	padding: var(--spacing-16);
+	border-radius: var(--border-radius);
+}
+
+.results-container h4 {
+	color: var(--text1);
+	font-size: var(--font-size-large);
+	font-weight: var(--font-weight-medium);
+	margin: 0 0 var(--spacing-8) 0;
+}
+
+.results-container div {
+	color: var(--text2);
+	font-size: var(--font-size-small);
+	margin: var(--spacing-4) 0;
+}
+
+.results-container strong {
+	color: var(--text1);
+	font-weight: var(--font-weight-medium);
+}

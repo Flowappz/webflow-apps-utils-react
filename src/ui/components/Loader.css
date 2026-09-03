@@ -1,0 +1,21 @@
+.fs-loader-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-arc {
+  animation: fs-loader-rotation linear infinite;
+  transform-origin: center;
+}
+
+@keyframes fs-loader-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

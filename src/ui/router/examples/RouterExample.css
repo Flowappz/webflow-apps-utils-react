@@ -1,0 +1,133 @@
+.router-example {
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 1rem;
+}
+
+.router-example .app-layout {
+	border: 1px solid #e1e5e9;
+	border-radius: 8px;
+	overflow: hidden;
+	background: white;
+}
+
+.router-example .navigation {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 1.5rem;
+	background: #f8f9fa;
+	border-bottom: 1px solid #e1e5e9;
+}
+
+.router-example .nav-brand h3 {
+	margin: 0;
+	color: #2c3e50;
+}
+
+.router-example .nav-links {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	gap: 1rem;
+}
+
+.router-example .nav-links a {
+	padding: 0.5rem 1rem;
+	text-decoration: none;
+	color: #6c757d;
+	border-radius: 4px;
+	transition: all 0.2s ease;
+}
+
+.router-example .nav-links a:hover {
+	background: #e9ecef;
+	color: #495057;
+}
+
+.router-example .nav-links a.active {
+	background: #007bff;
+	color: white;
+}
+
+.router-example .loading-indicator {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.75rem 1.5rem;
+	background: #fff3cd;
+	border-bottom: 1px solid #ffeaa7;
+	color: #856404;
+	font-size: 0.875rem;
+}
+
+.router-example .spinner {
+	width: 16px;
+	height: 16px;
+	border: 2px solid #ffeaa7;
+	border-top: 2px solid #856404;
+	border-radius: 50%;
+	animation: router-example-spin 1s linear infinite;
+}
+
+@keyframes router-example-spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.router-example .route-info {
+	padding: 1rem 1.5rem;
+	background: #f8f9fa;
+	border-bottom: 1px solid #e1e5e9;
+	font-size: 0.875rem;
+	color: #6c757d;
+	line-height: 1.5;
+}
+
+.router-example .main-content {
+	min-height: 300px;
+	padding: 2rem 1.5rem;
+}
+
+.router-example .router-controls {
+	padding: 1.5rem;
+	background: #f8f9fa;
+	border-top: 1px solid #e1e5e9;
+}
+
+.router-example .router-controls h4 {
+	margin: 0 0 1rem 0;
+	color: #2c3e50;
+}
+
+.router-example .controls-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+	gap: 0.5rem;
+}
+
+.router-example .controls-grid button {
+	padding: 0.5rem 1rem;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	background: white;
+	color: #495057;
+	cursor: pointer;
+	font-size: 0.875rem;
+	transition: all 0.2s ease;
+}
+
+.router-example .controls-grid button:hover {
+	background: #f8f9fa;
+	border-color: #adb5bd;
+}
+
+.router-example .controls-grid button:active {
+	background: #e9ecef;
+}

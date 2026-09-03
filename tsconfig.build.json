@@ -1,0 +1,26 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    "types": ["@webflow/designer-extension-typings"]
+  },
+  "include": ["src"],
+  "exclude": [
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx",
+    "src/**/*.stories.ts",
+    "src/**/*.stories.tsx",
+    "src/test-setup.ts",
+    "src/ui/components/layout/test-helpers",
+    "src/ui/providers/GlobalProviderDemo.tsx",
+    "src/ui/stores/forms/FormDemo.tsx",
+    "src/ui/icons/IconsShowcase.tsx",
+    "src/ui/utils/diff-mapper/DiffMapperDemo.tsx",
+    "src/ui/components/modal/Example.tsx"
+  ]
+}

@@ -1,0 +1,66 @@
+.action-buttons {
+	display: flex;
+	padding-top: 4px;
+	align-items: flex-start;
+	gap: var(--Spacing-8, 8px);
+}
+.file-preview {
+	width: 222px;
+	aspect-ratio: 16/9;
+	border-radius: 2.553px;
+	background: var(--background3);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-size: cover !important;
+	background-repeat: no-repeat !important;
+	background-position: center !important;
+}
+.image-upload {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	width: 100%;
+}
+
+.image-upload .label {
+	display: flex;
+	gap: 4px;
+}
+
+.image-upload .required {
+	color: var(--redText, #dc2626);
+}
+
+.upload-container .button-left-icon {
+	display: flex;
+	align-items: center;
+}
+.upload-container {
+	position: relative;
+	display: inline-block;
+}
+.upload-container.hidden {
+	display: none;
+}
+
+.file-input {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
+.preview-container {
+	display: flex;
+	width: 240px;
+	padding: 7.66px;
+	flex-direction: column;
+	align-items: flex-start;
+	border-radius: 2.553px;
+	border: 0.638px solid var(--border1);
+}

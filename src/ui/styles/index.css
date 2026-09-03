@@ -1,0 +1,546 @@
+/* Self-hosted Inter variable font (100–900) — no external font requests. */
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 100 900;
+	src: url('../fonts/Inter-VariableFont_opsz,wght.woff2') format('woff2-variations');
+}
+
+/*
+ * Fallback values for Webflow's hosted Designer theme variables
+ * (see https://developers.webflow.com/apps/designer/docs/design-guidelines).
+ *
+ * Inside the real Webflow Designer, Webflow injects the real, theme-correct
+ * values for these variables as normal (unlayered) CSS on this same document.
+ * A declaration in a CSS Cascade Layer always loses to an unlayered
+ * declaration for the same element/property, regardless of specificity or
+ * source order — so wrapping our copies in a layer means Webflow's real
+ * values win automatically inside the Designer, while these still apply
+ * everywhere else (local dev, Storybook) where nothing else defines them.
+ *
+ * These are only declared on :root — never redeclared on descendant
+ * elements — so normal CSS custom-property inheritance carries them (or
+ * Webflow's real values) down to the whole document. Redeclaring them lower
+ * in the tree would create an unopposed (and therefore always-winning)
+ * layered declaration that inheritance could never override.
+ */
+@layer webflow-token-fallbacks {
+	:root {
+		/* Webflow colors */
+		--background1: #1e1e1e;
+		--background2: #2e2e2e;
+		--background3: #383838;
+		--background4: #373737;
+		--background5: #444444;
+		--backgroundInactive: #2e2e2e;
+		--backgroundInverse: #ebebeb;
+		--backgroundInput: rgba(0, 0, 0, 0.15);
+
+		--actionPrimaryBackground: #006acc;
+		--actionPrimaryBackgroundHover: #187cd9;
+		--actionPrimaryText: #ffffff;
+		--actionPrimaryTextHover: #ffffff;
+		--actionSecondaryBackground:
+			linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.1) 100%),
+			rgba(255, 255, 255, 0.08);
+		--actionSecondaryBackgroundHover: linear-gradient(
+			180deg,
+			rgba(255, 255, 255, 0.18) 0%,
+			rgba(255, 255, 255, 0.16) 100%
+		);
+		--actionSecondaryText: #e0e0e0;
+		--actionSecondaryTextHover: #e0e0e0;
+		--actionSecondaryBorder: rgba(255, 255, 255, 0.1);
+		--actionSecondaryBorderHover: rgba(255, 255, 255, 0.15);
+
+		--text1: #ebebeb;
+		--text2: #b9b9b9;
+		--text3: #a3a3a3;
+		--textInactive: #6d6d6d;
+		--textInverse: #171717;
+
+		--border1: rgba(255, 255, 255, 0.1);
+		--border2: rgba(255, 255, 255, 0.14);
+		--border3: rgba(255, 255, 255, 0.19);
+
+		--blueText: #8ac2ff;
+		--blueIcon: #8ac2ff;
+		--blueBorder: #007df0;
+
+		--greenBackground: #007a41;
+		--greenBackgroundHover: #0d8a4f;
+		--greenText: #63d489;
+		--greenIcon: #63d489;
+		--greenBorder: #259d4d;
+
+		--yellowBackground: #946b00;
+		--yellowBackgroundHover: #af7f00;
+		--yellowText: #f3c831;
+		--yellowIcon: #f3c831;
+		--yellowBorder: #d7a220;
+
+		--redBackground: #cf313b;
+		--redBackgroundHover: #cb3535;
+		--redText: #ff8a8a;
+		--redIcon: #ff8a8a;
+		--redBorder: #e42f3a;
+
+		--orangeBackground: #bf4704;
+		--orangeBackgroundHover: #c95616;
+		--orangeText: #eba267;
+		--orangeIcon: #eba267;
+		--orangeBorder: #df640c;
+
+		--purpleBackground: #734ce0;
+		--purpleBackgroundHover: #815beb;
+		--purpleText: #b89eff;
+		--purpleIcon: #b89eff;
+		--purpleBorder: #875ffd;
+
+		/* Box shadows for buttons and inputs */
+		--boxShadows-action-colored:
+			0px 0.5px 1px 0px rgba(0, 0, 0, 0.8), 0px 0.5px 0.5px 0px rgba(255, 255, 255, 0.2) inset;
+		--boxShadows-action-secondary:
+			0px 0.5px 1px rgba(0, 0, 0, 0.8), inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.12);
+		--boxShadows-input-inner:
+			0px 1px 1px -1px rgba(0, 0, 0, 0.13) inset, 0px 3px 3px -3px rgba(0, 0, 0, 0.17) inset,
+			0px 4px 4px -4px rgba(0, 0, 0, 0.17) inset, 0px 8px 8px -8px rgba(0, 0, 0, 0.17) inset,
+			0px 12px 12px -12px rgba(0, 0, 0, 0.13) inset, 0px 16px 16px -16px rgba(0, 0, 0, 0.13) inset;
+
+		--boxShadows-menu:
+			0px 12px 24px 8px rgba(0, 0, 0, 0.08), 0px 8px 16px 4px rgba(0, 0, 0, 0.08),
+			0px 4px 8px 2px rgba(0, 0, 0, 0.08), 0px 2px 6px 0px rgba(0, 0, 0, 0.08),
+			0px -0.5px 0.5px 0px rgba(0, 0, 0, 0.12) inset,
+			0px 0.5px 0.5px 0px rgba(255, 255, 255, 0.12) inset;
+
+		/* TYPOGRAPHY */
+		--font-stack: 'Inter', sans-serif;
+
+		--input-inner-shadow:
+			0px 1px 1px -1px rgba(0, 0, 0, 0.13) inset, 0px 3px 3px -3px rgba(0, 0, 0, 0.17) inset,
+			0px 4px 4px -4px rgba(0, 0, 0, 0.17) inset, 0px 8px 8px -8px rgba(0, 0, 0, 0.17) inset,
+			0px 12px 12px -12px rgba(0, 0, 0, 0.13) inset, 0px 16px 16px -16px rgba(0, 0, 0, 0.13) inset;
+
+		--menu-shadow:
+			0px 12px 24px 8px rgba(0, 0, 0, 0.08), 0px 8px 16px 4px rgba(0, 0, 0, 0.08),
+			0px 4px 8px 2px rgba(0, 0, 0, 0.08), 0px 2px 6px 0px rgba(0, 0, 0, 0.08),
+			0px -0.5px 0.5px 0px rgba(0, 0, 0, 0.12) inset,
+			0px 0.5px 0.5px 0px rgba(255, 255, 255, 0.12) inset;
+
+		--font-size-small: 11.5px;
+		--font-size-small-letter-spacing: -0.115px;
+		--font-size-large: 12.5px;
+		--font-weight-normal: 400;
+		--font-weight-medium: 600;
+		--border-radius: 4px;
+	}
+}
+
+/*
+ * Genuinely custom, non-Webflow tokens (scrollbar, spacing scale, Finsweet
+ * Components sizing) plus layout resets that consume the tokens above.
+ * These are never provided by Webflow, so they stay outside the fallback
+ * layer and apply unconditionally everywhere, including inside the Designer.
+ */
+html,
+body,
+#app {
+	/* custom scrollbar related — derived from the (possibly Webflow-provided)
+	   background tokens so the scrollbar follows the active theme too */
+	--sb-track-color: var(--background1);
+	--sb-thumb-color: var(--background4);
+	--sb-size: 6px;
+	--black: #000000;
+
+	/* Hover effect: derived from --text1 (Webflow-provided inside the
+	   Designer) instead of a literal white overlay, so it stays correct
+	   regardless of theme. */
+	--hoverColor: color-mix(in srgb, var(--text1) 14%, transparent);
+
+	/* NONWEBFLOW VARIABLES */
+	--padding-tiny: 2px;
+	--padding-small: 4px;
+	--padding-regular: 8px;
+	--padding-large: 12px;
+
+	/* spacing */
+	--spacing-12: 12px;
+	--spacing-16: 16px;
+	--spacing-8: 8px;
+	--spacing-4: 4px;
+	--spacing-32: 32px;
+	--spacing-24: 24px;
+
+	/* Finsweet Components: super app specific sizes */
+	--components-navbar-height: 43px;
+	--left-sidebar-width: 274px;
+
+	height: 100%;
+	background: var(--background1);
+	font-family: var(--font-stack);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	color: var(--text1);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	font-size: var(--font-size-large);
+	font-family:
+		Inter,
+		-apple-system,
+		BlinkMacSystemFont,
+		'Segoe UI',
+		Roboto,
+		Oxygen-Sans,
+		Ubuntu,
+		Cantarell,
+		'Helvetica Neue',
+		Helvetica,
+		Arial,
+		'Apple Color Emoji',
+		'Segoe UI Emoji',
+		'Segoe UI Symbol',
+		sans-serif;
+}
+
+button,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+div,
+input,
+textarea,
+select,
+option,
+label,
+a {
+	font-family:
+		Inter,
+		-apple-system,
+		BlinkMacSystemFont,
+		'Segoe UI',
+		Roboto,
+		Oxygen-Sans,
+		Ubuntu,
+		Cantarell,
+		'Helvetica Neue',
+		Helvetica,
+		Arial,
+		'Apple Color Emoji',
+		'Segoe UI Emoji',
+		'Segoe UI Symbol',
+		sans-serif;
+}
+
+a {
+	color: inherit;
+}
+
+h1 {
+	font-size: var(--font-size-large);
+	font-weight: 400;
+	margin-bottom: 1rem;
+	margin-block-start: 4px;
+	margin-block-end: 4px;
+}
+
+h2 {
+	font-size: var(--font-size-small);
+	color: var(--text1);
+	font-weight: 600;
+	margin-block-start: 4px;
+	margin-block-end: 4px;
+}
+
+h3 {
+	font-size: var(--font-size-small);
+	font-weight: 400;
+	margin-bottom: 1rem;
+	margin-block-start: 4px;
+	margin-block-end: 4px;
+}
+
+form {
+	display: block;
+	margin-top: 0em;
+	margin-block-end: 0em;
+}
+
+label {
+	display: block;
+	font-size: var(--font-size-small);
+	font-weight: 400;
+}
+
+/* Global Disabled state */
+.disabled,
+.login-required {
+	cursor: not-allowed !important;
+	opacity: 0.8 !important;
+}
+
+/* Used for disabled sections */
+.not-allowed {
+	cursor: not-allowed !important;
+}
+
+input {
+	/* Remove default appearance for some browsers */
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+
+	/* Remove default border and padding for all browsers */
+	border: var(--border3) 1px solid;
+	border-radius: var(--border-radius, 4px);
+	padding: var(--padding-small);
+	margin: 0;
+
+	/* Set font styles to inherit from parent */
+	font-family: inherit;
+	font-size: inherit;
+	color: var(--text2);
+
+	/* Remove the default background */
+	background: var(--background1);
+
+	/* Remove the highlight when focused (outline: none is generally discouraged due to accessibility concerns,
+    so use it carefully and provide alternative focus styles) */
+	outline: none;
+}
+
+/* Placeholder */
+
+input::placeholder {
+	/* Chrome, Firefox, Opera, Safari */
+	color: var(--text3) !important;
+}
+
+input::-webkit-input-placeholder {
+	/* Chrome/Safari/Opera */
+	color: var(--text3) !important;
+}
+
+input::-moz-placeholder {
+	/* Firefox */
+	color: var(--text3) !important;
+	opacity: 1;
+	/* Firefox sometimes reduces opacity */
+}
+
+input:-ms-input-placeholder {
+	/* IE/Edge */
+	color: var(--text3) !important;
+}
+
+textarea {
+	/* Remove default appearance for some browsers */
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+
+	/* Remove default border and padding for all browsers */
+	padding: var(--padding-regular);
+	margin: 0;
+
+	/* Set font styles to inherit from parent */
+	font-family: inherit;
+	font-size: inherit;
+	color: var(--text2);
+
+	/* Remove the default background */
+	background: var(--background1);
+
+	/* border */
+	border: 1px solid;
+	border-color: var(--border3);
+	border-radius: var(--border-radius);
+
+	/* Remove the highlight when focused (outline: none is generally discouraged due to accessibility concerns,
+    so use it carefully and provide alternative focus styles) */
+	outline: none;
+
+	resize: none;
+}
+
+input[type='checkbox'] {
+	/* The default appearance must be removed for custom styles */
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+
+	/* Customize the checkbox */
+	width: 12px;
+	height: 12px;
+	background: var(--background5);
+	border-radius: var(--border-radius);
+	vertical-align: middle;
+	position: relative;
+}
+
+/* Checkmark style */
+input[type='checkbox']:checked::before {
+	content: '';
+	display: block;
+	width: 9px;
+	height: 5px;
+	border-style: solid;
+	border-color: var(--text1);
+	border-width: 0 0 2px 2px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -60%) rotate(-45deg);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+/* input[type="number"] {
+    -moz-appearance: textfield;
+  } */
+
+.button {
+	/* Reset */
+	all: unset;
+	box-sizing: border-box;
+
+	/* Layout */
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	gap: 2px;
+
+	/* Styling */
+	padding: 4px;
+	border-radius: var(--border-radius, 4px);
+	font-family: var(--font-stack, Inter, sans-serif);
+	font-weight: var(--font-weight-normal, 400);
+	line-height: 16px;
+	letter-spacing: -0.115px;
+	text-align: center;
+	cursor: pointer;
+	user-select: none;
+	transition: all 0.2s ease;
+
+	/* Primary button styling */
+	background: var(--actionPrimaryBackground);
+	color: var(--actionPrimaryText);
+
+	/* Shadow */
+	box-shadow:
+		0px 29px 23px -16px rgba(255, 255, 255, 0.04) inset,
+		0px 0.5px 0.5px 0px rgba(255, 255, 255, 0.2) inset,
+		0px 0.5px 1px 0px #000;
+}
+
+.button:hover:not(:disabled) {
+	background: var(--actionPrimaryBackgroundHover);
+}
+
+.button:disabled {
+	cursor: not-allowed;
+	opacity: 0.4;
+	pointer-events: none;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-vertical {
+	display: flex;
+	flex-direction: column;
+}
+
+.tiny-label {
+	color: var(--text2);
+	font-size: var(--font-size-small);
+	padding-top: 4px;
+	padding-bottom: 4px;
+	text-align: center;
+}
+
+/*
+  The following styles are for the notification component
+  */
+.notification-wrapper {
+	display: flex;
+	padding: 8px;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 10px;
+	align-self: stretch;
+}
+/* Global SVG styles */
+svg:not(.loader-svg) {
+	display: block;
+	width: 14px;
+	height: 14px;
+}
+
+/* Modern Native Scrollbar Styles */
+
+/* Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+	width: var(--sb-size);
+	height: var(--sb-size);
+}
+
+::-webkit-scrollbar-track {
+	background: var(--sb-track-color);
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--sb-thumb-color);
+	border-radius: 4px;
+	transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--background3);
+}
+
+::-webkit-scrollbar-thumb:active {
+	background: var(--background2);
+}
+
+::-webkit-scrollbar-corner {
+	background: var(--sb-track-color);
+}
+
+/* Firefox scrollbar styling */
+@supports selector(::-moz-scrollbar-thumb) {
+	* {
+		scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+		scrollbar-width: thin;
+	}
+}
+
+/* Fallback for Firefox without newer scrollbar support */
+@supports not selector(::-webkit-scrollbar) {
+	html {
+		scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+		scrollbar-width: thin;
+	}
+}

@@ -1,0 +1,41 @@
+.btn-group {
+	display: flex;
+	background: var(--actionSecondaryBackground);
+	border-radius: 4px;
+	box-shadow: var(
+		--boxShadows-action-secondary,
+		0 0.5px 1px 0 #000,
+		0 0.5px 0.5px 0 rgba(255, 255, 255, 0.12) inset
+	);
+}
+
+.btn-group .btn {
+	padding: 4px 8px;
+	cursor: pointer;
+	background: transparent;
+	border-radius: 4px;
+	margin: 2px 0px;
+	color: var(--text1);
+}
+
+.btn-group .btn.disabled {
+	opacity: 0.75;
+	cursor: not-allowed;
+}
+
+.btn-group .btn:first-of-type {
+	margin-left: 2px;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+.btn-group .btn:last-of-type {
+	margin-right: 2px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.btn-group .btn.active {
+	background: var(--background1);
+	color: var(--text1);
+}

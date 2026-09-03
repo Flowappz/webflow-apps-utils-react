@@ -1,0 +1,63 @@
+.checkbox {
+	width: 16px;
+	height: 16px;
+	border-radius: 1px;
+	border: 2px solid var(--actionSecondaryBorder);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--background2);
+
+	box-shadow:
+		0 16px 16px -16px rgba(0, 0, 0, 0.13) inset,
+		0 12px 12px -12px rgba(0, 0, 0, 0.13) inset,
+		0 8px 8px -8px rgba(0, 0, 0, 0.17) inset,
+		0 4px 4px -4px rgba(0, 0, 0, 0.17) inset,
+		0 3px 3px -3px rgba(0, 0, 0, 0.17) inset,
+		0 1px 1px -1px rgba(0, 0, 0, 0.13) inset;
+	cursor: pointer;
+	border-radius: 2px;
+}
+
+.checkbox--radio {
+	border-radius: 50%;
+}
+
+.checkbox svg {
+	width: 16px;
+	height: 16px;
+}
+
+.checkbox--checked {
+	color: var(--text1);
+	border: none;
+}
+
+.checkbox--checked svg {
+	color: var(--text1);
+	background: var(--actionPrimaryBackground);
+	border-radius: 2px;
+	padding: 2.5px;
+}
+
+.checkbox--checked.checkbox--radio svg {
+	border-radius: 50%;
+}
+
+.checkbox--disabled {
+	cursor: not-allowed;
+	opacity: 0.6;
+}
+
+.checkbox:focus-visible {
+	outline: 2px solid var(--actionPrimaryBackground);
+	outline-offset: 2px;
+}
+
+.checkbox:hover:not(.checkbox--disabled) {
+	border-color: var(--actionSecondaryBorder);
+}
+
+.checkbox--checked:hover:not(.checkbox--disabled) svg {
+	background: var(--actionPrimaryBackground);
+}

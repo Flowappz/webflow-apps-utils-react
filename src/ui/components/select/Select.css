@@ -1,0 +1,223 @@
+.select-tooltip {
+	padding: 0;
+}
+
+.dropdown-wrapper .label .label-description-title,
+.dropdown-wrapper .label .label-description {
+	height: max-content;
+}
+
+.dropdown-wrapper .search-container {
+	display: flex;
+	align-items: center;
+	align-self: stretch;
+	gap: 4px;
+	padding: 4px;
+}
+.dropdown-wrapper .search-container input {
+	flex: 1 0 0;
+	align-self: stretch;
+	height: 25px;
+	width: 100%;
+}
+.dropdown-wrapper .label .label-name {
+	color: var(--text1);
+
+	font-size: 11.5px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px;
+	letter-spacing: -0.115px;
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+
+.dropdown-wrapper .label .label-description {
+	color: var(--text2, #bdbdbd);
+
+	font-size: 10px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px;
+	white-space: normal;
+	overflow-wrap: break-word;
+}
+.dropdown-wrapper .label .label-content {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	flex: 1 0 0;
+}
+.popup .wrapper {
+	width: 200px;
+}
+
+.dropdown-label.active .labels:not(.dropdown-label.active [role='tooltip'] .labels) {
+	color: rgb(138, 194, 255);
+	background: rgba(0, 132, 255, 0.18);
+	cursor: pointer;
+	border-radius: 4px;
+}
+.dropdown-wrapper {
+	display: flex;
+	gap: 0;
+	align-items: center;
+}
+.dropdown-item .labels .text {
+	line-height: normal !important;
+}
+.dropdown {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	outline: none; /* Remove default focus outline since we have custom focus styling */
+}
+.dropdown:focus-visible {
+	outline: none; /* Prevent browser's default focus ring */
+}
+.dropdown.disabled {
+	cursor: not-allowed !important;
+}
+
+.dropdown-header[aria-disabled='true'] {
+	cursor: not-allowed !important;
+}
+.dropdown-header {
+	display: flex;
+	align-items: center;
+	padding: 4px;
+	cursor: pointer;
+	width: 100%;
+}
+
+.dropdown-list .dropdown-item.hover-state:not(.disabled):not(.items-disabled) {
+	background: var(--background5);
+}
+
+.dropdown-list {
+	display: none;
+	padding: 0;
+	width: 100%;
+	position: absolute;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 0;
+	border-radius: 4px;
+	border: 1px solid var(--border1);
+	background: var(--background3);
+	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+	z-index: 99999;
+	outline: none; /* Remove focus outline */
+}
+.dropdown-list:focus-visible {
+	outline: none; /* Prevent browser's default focus ring */
+}
+
+.dropdown-items-scroll {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 4px;
+	width: 100%;
+	overflow-y: auto;
+}
+
+.items-disabled-overlay {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0, 0, 0, 0.55);
+	z-index: 1;
+	padding: 12px;
+	text-align: center;
+}
+
+.dropdown-footer {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	border-top: 1px solid var(--border1);
+	background: var(--background3);
+	flex-shrink: 0;
+}
+.dropdown-list .selected {
+	display: flex;
+	padding: 4px 8px;
+	align-items: center;
+	gap: 4px;
+	align-self: stretch;
+	color: var(--text2);
+
+	font-size: 11px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 16px;
+}
+
+.dropdown-wrapper .label {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	flex: 1 0 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.dropdown-wrapper .popup {
+	position: absolute;
+	z-index: 9999999;
+	top: 100px;
+	left: 73px;
+}
+
+.dropdown-item {
+	all: unset;
+	cursor: pointer;
+	display: grid;
+	grid-template-columns: 16px 1fr;
+	align-items: center;
+	padding: 4px 8px;
+	gap: 4px;
+	align-self: stretch;
+	color: var(--text1);
+
+	font-size: 11px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px;
+	border: 1px solid transparent;
+	outline: none; /* Remove focus outline */
+}
+.dropdown-item:focus-visible {
+	outline: none; /* Prevent browser's default focus ring */
+}
+.dropdown-item .icon,
+.dropdown-list .selected .icon {
+	display: flex;
+	width: 16px;
+	height: 16px;
+	align-items: center;
+	gap: 2px;
+}
+
+.dropdown-wrapper .arrow {
+	width: 12px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.dropdown-wrapper .arrow svg {
+	width: 10px;
+	height: 10px;
+}
+
+.dropdown-item.disabled {
+	opacity: 0.75;
+	cursor: not-allowed;
+}

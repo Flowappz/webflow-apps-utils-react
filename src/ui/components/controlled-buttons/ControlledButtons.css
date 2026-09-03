@@ -1,0 +1,113 @@
+.footer .w-button svg {
+	transform: rotate(270deg);
+}
+.controlled-buttons .target:not(:has(.dropdown-label)) {
+	width: max-content !important;
+}
+.controlled-buttons .target .tooltip {
+	padding: 8px 0;
+	gap: 0;
+}
+.footer .button-link.blocked .icon svg {
+	color: var(--yellowText);
+}
+.footer .tooltip {
+	width: 100%;
+}
+.footer .tooltip .content-wrapper {
+	width: 100%;
+}
+
+.footer .tooltip {
+	padding: 0 !important;
+	flex-direction: column;
+	gap: 0;
+}
+.tooltip-content {
+	display: grid;
+	grid-template-columns: 14px 1fr;
+	width: 100%;
+	height: 100%;
+	align-items: start;
+	gap: var(--Spacing-8, 8px);
+	padding: 6px;
+}
+
+.tooltip-content.invalid-selection svg {
+	color: var(--yellowText);
+}
+.controlled-buttons {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 4px;
+}
+.controlled-buttons .icon svg {
+	width: 14px;
+	height: 14px;
+	color: var(--text2);
+	margin-top: 2px;
+}
+.controlled-buttons .icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.popup-content {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	min-width: 150px;
+	background: var(--background3);
+	border-radius: 4px;
+	width: 100%;
+}
+.popup-content-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 16px;
+	height: 16px;
+	color: var(--text1);
+}
+.popup-content-icon svg {
+	width: 16px;
+	height: 16px;
+}
+
+.popup-content-list {
+	display: flex;
+	width: 100%;
+	padding: 4px 0px;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.popup-content-list svg {
+	height: 16px;
+	width: 16px;
+	color: var(--text1);
+}
+
+.popup-content-list .section-wrap.link {
+	display: flex;
+	padding: 4px var(--Spacing-8, 8px);
+	align-items: flex-start;
+	gap: 4px;
+	align-self: stretch;
+	flex-direction: row;
+}
+
+.popup-content-list .popup-content-item {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	flex: 1 0 0;
+}
+
+.footer .popup-button-chevron svg {
+	transform: rotate(90deg);
+	width: 16px;
+	height: 16px;
+}

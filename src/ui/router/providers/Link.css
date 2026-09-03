@@ -1,0 +1,23 @@
+a.router-link,
+button.router-link {
+	text-decoration: none;
+	cursor: pointer;
+	border: none;
+	background: none;
+	color: inherit;
+}
+
+a.router-link:hover,
+button.router-link:hover {
+	text-decoration: underline;
+}
+
+.router-link.disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+	pointer-events: none;
+}
+
+.router-link.active {
+	font-weight: bold;
+}

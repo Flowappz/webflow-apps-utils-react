@@ -1,0 +1,80 @@
+.progress-container {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	width: 100%;
+}
+
+.progress-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 4px;
+}
+
+.status-info {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	flex: 1;
+	min-width: 0;
+}
+
+.status-icon svg {
+	width: 20px;
+	height: 20px;
+	color: var(--text1);
+}
+
+.status-icon.success svg {
+	color: var(--greenText);
+}
+
+.progress-details {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	flex-shrink: 0;
+}
+
+.progress-spinner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.progress-track {
+	width: 100%;
+	background-color: var(--backgroundInput, #000000);
+	border-radius: 2px;
+	overflow: hidden;
+	position: relative;
+}
+
+.progress-fill {
+	height: 100%;
+	border-radius: 2px;
+	transition: width 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+	min-width: 1px;
+}
+
+.progress-fill.completed {
+	background-color: var(--greenText) !important;
+}
+
+.progress-fill--success {
+	background-color: var(--greenText);
+}
+
+.progress-fill--warning {
+	background-color: var(--yellowText);
+}
+
+.progress-fill--error {
+	background-color: var(--redText);
+}
+
+/* Ensure smooth transitions */
+.progress-fill {
+	will-change: width;
+}

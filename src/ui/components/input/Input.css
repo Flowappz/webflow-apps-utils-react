@@ -1,0 +1,199 @@
+.input-tooltip {
+	padding: 0;
+}
+.webflow-input-wrapper input::placeholder {
+	color: var(--text2) !important;
+	opacity: 1; /* Firefox */
+}
+
+.webflow-input-wrapper input::-ms-input-placeholder {
+	/* Edge 12 -18 */
+	color: var(--text2) !important;
+}
+.webflow-input-wrapper {
+	position: relative;
+	border: 1px solid var(--border1, #212121);
+	border-radius: 4px;
+	padding: 0 4px;
+	display: grid;
+	grid-template-columns: 1fr;
+	background-color: var(--background1);
+	height: 24px;
+	box-shadow:
+		0px 16px 16px -16px rgba(0, 0, 0, 0.13) inset,
+		0px 12px 12px -12px rgba(0, 0, 0, 0.13) inset,
+		0px 8px 8px -8px rgba(0, 0, 0, 0.17) inset,
+		0px 4px 4px -4px rgba(0, 0, 0, 0.17) inset,
+		0px 3px 3px -3px rgba(0, 0, 0, 0.17) inset,
+		0px 1px 1px -1px rgba(0, 0, 0, 0.13) inset;
+	background: var(--background1);
+	overflow: hidden;
+}
+
+.webflow-input-wrapper.units {
+	grid-template-columns: 1fr auto;
+	padding: 0 0 0 4px;
+}
+
+.webflow-input-wrapper.steppers {
+	grid-template-columns: 1fr auto;
+	padding: 0 0 0 4px;
+}
+
+.webflow-input-wrapper.units .webflow-input {
+	padding-right: 4px;
+}
+
+.webflow-input-wrapper.steppers .webflow-input {
+	padding-right: 4px;
+}
+
+.input-units-steppers {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	justify-self: start;
+	width: 100%;
+	min-width: 16px;
+	padding: 2px;
+	color: var(--text1, #ffffff);
+	font-size: 9px;
+	cursor: not-allowed;
+	user-select: none;
+	text-align: center;
+	opacity: 0.75;
+}
+
+.input-units-steppers.steppers {
+	justify-content: center;
+	flex-direction: column;
+	width: 16px;
+	gap: 1px;
+	background-color: var(--border1);
+	margin-top: -2px;
+	margin-bottom: -2px;
+}
+
+.stepper-button {
+	border: none;
+	width: 16px;
+	background-color: var(--background4);
+	color: var(--text2);
+	font-size: 0.8em;
+	line-height: 1;
+	height: 48%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+.stepper-button-icon {
+	width: 8px;
+	height: 5px;
+}
+
+.stepper-button:hover:not(:disabled) {
+	background-color: var(--hoverColor);
+}
+
+.stepper-button:disabled {
+	opacity: 0.75;
+	cursor: not-allowed;
+}
+
+.stepper-up {
+	transform: rotate(0deg);
+	border-radius: 0 1px 0 0;
+}
+
+.stepper-down {
+	transform: rotate(180deg);
+	border-radius: 1px 0 0 0;
+}
+
+.stepper-button svg {
+	width: 16px;
+	height: 16px;
+}
+
+.webflow-input {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	border: none;
+	gap: var(--border-radius, 2px);
+	flex: 1 0 0;
+	color: var(--text3);
+	font-size: 11.5px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px;
+	letter-spacing: -0.115px;
+	width: 100%;
+	background-color: transparent;
+	position: relative;
+	z-index: 2;
+	padding-right: 4px;
+}
+
+.webflow-input.has-pill {
+	padding-left: 4px;
+	color: var(--text1);
+}
+
+.webflow-input-wrapper:has(.webflow-input:focus) {
+	border: 1px solid var(--blueBorder);
+}
+.webflow-input:focus {
+	outline: none;
+}
+
+.webflow-input-wrapper.invalid {
+	border: 1px solid var(--redBorder);
+}
+
+.webflow-input-wrapper.invalid:has(.webflow-input:focus) {
+	border: 1px solid var(--redBorder);
+}
+
+.webflow-input-wrapper.disabled {
+	cursor: not-allowed;
+	border: 1px solid var(--border1);
+}
+
+.webflow-input-wrapper .pill {
+	position: absolute;
+	height: 18px;
+	border-radius: 3px;
+	z-index: 1;
+	top: 2px;
+	left: 4px;
+	max-width: calc(100% - 8px);
+}
+
+.webflow-input-wrapper .pill.blue {
+	background: var(--actionPrimaryBackground);
+}
+
+.webflow-input-wrapper .pill.gray {
+	background: var(--background5);
+}
+
+.alert-tooltip {
+	border-radius: 4px;
+	padding: 2px 4px;
+	white-space: nowrap;
+	box-shadow: var(
+		--boxShadows-action-secondary,
+		0px 0.5px 1px 0px #000,
+		0px 0.5px 0.5px 0px rgba(255, 255, 255, 0.12) inset
+	);
+}

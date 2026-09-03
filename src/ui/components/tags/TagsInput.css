@@ -1,0 +1,187 @@
+.tags-input-tooltip {
+	padding: 0;
+}
+
+.tags-input-wrapper {
+	position: relative;
+	border: 1px solid var(--border3);
+	border-radius: var(--border-radius);
+	padding: 4px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	align-content: flex-start;
+	background: var(--background1);
+	min-height: 32px;
+	box-shadow:
+		0px 16px 16px -16px rgba(0, 0, 0, 0.13) inset,
+		0px 12px 12px -12px rgba(0, 0, 0, 0.13) inset,
+		0px 8px 8px -8px rgba(0, 0, 0, 0.17) inset,
+		0px 4px 4px -4px rgba(0, 0, 0, 0.17) inset,
+		0px 3px 3px -3px rgba(0, 0, 0, 0.17) inset,
+		0px 1px 1px -1px rgba(0, 0, 0, 0.13) inset;
+	cursor: text;
+}
+
+.tags-input-wrapper.focused {
+	border-color: var(--blueBorder);
+}
+
+.tags-input-wrapper.invalid {
+	border-color: var(--redBorder);
+}
+
+.tags-input-wrapper.success {
+	border-color: var(--greenBorder);
+}
+
+.tags-input-wrapper.disabled,
+.tags-input-wrapper.readonly {
+	cursor: not-allowed;
+	opacity: 0.7;
+	border-color: var(--border1);
+}
+
+.tags-input-wrapper.loading {
+	cursor: wait;
+}
+
+.tags-input-content {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	align-content: flex-start;
+	gap: 0;
+	width: 100%;
+}
+
+.tags-input-wrapper.show-remove-icon .tags-input-content {
+	gap: 4px;
+}
+
+.tags-input-wrapper .tag {
+	position: relative;
+	display: flex;
+	padding: 4px 8px;
+	justify-content: center;
+	align-items: center;
+	border-radius: var(--border-radius);
+	background: var(--actionSecondaryBackground);
+	color: var(--text1);
+	font-size: var(--font-size-small);
+	font-weight: var(--font-weight-normal);
+	line-height: 16px;
+	letter-spacing: -0.115px;
+	box-shadow: var(
+		--boxShadows-action-secondary,
+		0 0.5px 1px 0 #000,
+		0 0.5px 0.5px 0 rgba(255, 255, 255, 0.12) inset
+	);
+	user-select: none;
+	max-width: 100%;
+	min-width: 0;
+	margin: 2px;
+}
+
+.tags-input-wrapper.show-remove-icon .tag {
+	margin: 0;
+}
+
+.tags-input-wrapper .tag.expandable {
+	cursor: pointer;
+}
+
+.tags-input-wrapper .tag.expanded .tag-text {
+	overflow: visible;
+	text-overflow: unset;
+	white-space: normal;
+	word-break: break-word;
+}
+
+.tags-input-wrapper .tag-text {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	min-width: 0;
+}
+
+.tags-input-wrapper .tag-remove {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: max-content;
+	padding: 4px;
+	border: none;
+	background: var(--background5, #464646);
+	color: var(--text2);
+	cursor: pointer;
+	border-radius: 0 var(--border-radius) var(--border-radius) 0;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.tags-input-wrapper:not(.disabled) .tag:hover .tag-remove {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+/* Show remove icon mode - inline button */
+.tags-input-wrapper.show-remove-icon .tag-remove {
+	position: relative;
+	top: auto;
+	right: auto;
+	bottom: auto;
+	padding: 0;
+	margin-left: 4px;
+	background: transparent;
+	opacity: 1;
+	pointer-events: auto;
+	border-radius: 0;
+}
+
+.tags-input-wrapper .tag-remove:not(:disabled) {
+	color: var(--text1);
+}
+
+.tags-input-wrapper .tag-remove:disabled {
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+
+.tags-input-wrapper .tag-remove svg {
+	width: 10px;
+	height: 10px;
+}
+
+.tags-input-field {
+	flex: 1;
+	min-width: 60px;
+	padding: 4px 8px;
+	border: none;
+	background: transparent;
+	color: var(--text1);
+	font-size: var(--font-size-small);
+	font-family: inherit;
+	line-height: 16px;
+	letter-spacing: -0.115px;
+	outline: none;
+}
+
+.tags-input-field::placeholder {
+	color: var(--text3);
+}
+
+.tags-input-field:disabled {
+	cursor: not-allowed;
+}
+
+.tags-input-loader {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 4px;
+}

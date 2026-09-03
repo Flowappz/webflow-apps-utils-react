@@ -1,0 +1,53 @@
+.color-picker {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	height: 24px;
+	border: 1px solid var(--border1);
+	border-radius: 4px;
+	overflow: hidden;
+	background: var(--background1);
+	box-shadow:
+		0px 16px 16px -16px rgba(0, 0, 0, 0.13) inset,
+		0px 12px 12px -12px rgba(0, 0, 0, 0.13) inset,
+		0px 8px 8px -8px rgba(0, 0, 0, 0.17) inset,
+		0px 4px 4px -4px rgba(0, 0, 0, 0.17) inset,
+		0px 3px 3px -3px rgba(0, 0, 0, 0.17) inset,
+		0px 1px 1px -1px rgba(0, 0, 0, 0.13) inset;
+
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+.color-picker__swatch {
+	position: relative;
+	width: 24px;
+	height: 24px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.color-swatch {
+	width: 100%;
+	height: 100%;
+}
+
+.color-picker__input {
+	width: 80px;
+	padding: 4px 8px 4px 0px;
+	border-radius: 4px;
+	font-size: 12px;
+	border: none;
+	background: transparent;
+}
+
+.color-picker:has(.color-picker__input:focus) {
+	outline: none;
+	border-color: var(--blueBorder);
+}
+
+.color-picker:has(.tooltip[aria-hidden='false']) {
+	border-color: var(--blueBorder);
+}

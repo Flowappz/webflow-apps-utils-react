@@ -1,0 +1,36 @@
+.main-loader {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 99999999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+
+.loading-info.error svg {
+	width: 40px;
+	height: 40px;
+}
+
+.loading-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	color: var(--actionSecondaryText);
+	text-align: center;
+	font-size: 11.5px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px;
+	letter-spacing: -0.115px;
+}
+
+.main-loader a {
+	color: var(--actionSecondaryText);
+	text-decoration: none;
+}

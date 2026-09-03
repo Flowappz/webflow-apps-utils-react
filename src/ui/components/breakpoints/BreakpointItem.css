@@ -1,0 +1,44 @@
+.breakpoint-item {
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: var(--Spacing-8, 8px);
+	align-self: stretch;
+}
+.breakpoint-content {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: var(--Spacing-12, 12px);
+	align-self: stretch;
+	border-radius: 4px;
+	border: 1px solid var(--border1);
+	padding: var(--Spacing-12, 12px);
+}
+
+.breakpoint-row {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	gap: var(--Spacing-8, 8px);
+	align-self: stretch;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.device-info {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	color: #fff;
+	position: relative;
+}
+.breakpoint-row .device-info > .labels:first-of-type .text {
+	gap: 4px;
+}
+.device-info .bp-icon-wrapper > .text > svg {
+	width: 16px;
+	height: 16px;
+}

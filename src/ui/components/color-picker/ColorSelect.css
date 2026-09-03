@@ -1,0 +1,266 @@
+/* Main Container */
+/* Root class renamed from `.color-picker` to `.color-select` to avoid a clash
+   with ColorPicker's root class now that Svelte style scoping is gone. */
+.color-select {
+	width: 241px;
+	height: auto;
+	box-shadow: 0px 3px 6px -2px rgba(0, 0, 0, 0.36);
+	display: inline-flex;
+}
+
+.color-picker__container {
+	width: 241px;
+	padding: 8px;
+	background: var(--background4);
+	border-radius: 4px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+/* Color Well */
+.color-well {
+	width: 225px;
+	height: 150px;
+	position: relative;
+	border-radius: 2px;
+	outline: 1px solid var(--border1, rgba(255, 255, 255, 0.1));
+	outline-offset: -1px;
+	cursor: crosshair;
+}
+
+.color-well__picker {
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	border: 2px solid white;
+	border-radius: 50%;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+	pointer-events: none;
+	z-index: 10;
+}
+
+/* Color Bars */
+.color-bars {
+	width: 225px;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+.color-bar__handle {
+	position: absolute;
+	top: 1px !important;
+	transform: translateX(-50%);
+	pointer-events: none;
+	height: 11px;
+	width: 6px;
+	border-radius: 1px;
+	box-shadow:
+		0 0 0 2px var(--text1),
+		0 0 0 3px rgba(0, 0, 0, 0.3),
+		inset 0 0 0 1px rgba(0, 0, 0, 0.3);
+}
+
+.eyedropper-btn {
+	width: 32px;
+	height: 32px;
+	padding: 4px;
+	background: var(
+		--actionSecondaryBackground,
+		linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.1) 100%),
+		rgba(255, 255, 255, 0.08)
+	);
+	box-shadow: 0px 0.5px 1px black;
+	border-radius: 4px;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.eyedropper-btn__icon {
+	width: 16px;
+	height: 16px;
+}
+
+.eyedropper-btn__icon svg {
+	color: var(--text1, #ebebeb);
+}
+.color-bars__container {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.color-bar {
+	padding: 1px 0;
+	display: flex;
+}
+
+.color-bar__hue {
+	width: 186px;
+	height: 12px;
+	background: linear-gradient(
+		90deg,
+		#ff0000 0%,
+		#ff8a00 8%,
+		#fff500 18%,
+		#00ff47 39%,
+		#00f0ff 51%,
+		#0019fb 64%,
+		#fa00ff 84%,
+		#ff0000 100%
+	);
+	border-radius: 2px;
+	outline: 1px solid var(--border1, rgba(255, 255, 255, 0.1));
+	cursor: pointer;
+}
+
+.color-bar__alpha {
+	width: 186px;
+	border-radius: 2px;
+	height: 12px;
+	position: relative;
+	cursor: pointer;
+}
+
+.color-bar__alpha-bg {
+	position: absolute;
+	width: 186px;
+	inset: 0;
+	border-radius: 2px;
+	overflow: hidden;
+	background-image:
+		linear-gradient(45deg, #ccc 25%, transparent 25%),
+		linear-gradient(-45deg, #ccc 25%, transparent 25%),
+		linear-gradient(45deg, transparent 75%, #ccc 75%),
+		linear-gradient(-45deg, transparent 75%, #ccc 75%);
+	background-size: 8px 8px;
+	background-position:
+		0 0,
+		0 4px,
+		4px -4px,
+		-4px 0px;
+}
+
+.color-bar__alpha-gradient {
+	position: absolute;
+	inset: 0;
+}
+
+.color-bar__hue-handle {
+	position: absolute;
+	top: -1px;
+	transform: translateX(-50%);
+	pointer-events: none;
+}
+
+.color-bar__alpha-handle {
+	position: absolute;
+	top: -1px;
+	transform: translateX(-50%);
+	pointer-events: none;
+}
+
+/* Divider */
+.color-picker__container .divider {
+	width: 225px;
+	height: 1px;
+	background: var(--border1);
+}
+
+/* Controls */
+.controls {
+	display: grid;
+	grid-template-columns: 80px 1fr 30px;
+	gap: 7px;
+	width: 100%;
+}
+
+.control-group {
+	display: grid;
+	grid-template-rows: 26px 20px;
+	gap: 8px;
+}
+
+.control-group--main {
+	flex: 1;
+}
+
+.input-row {
+	display: flex;
+	gap: 4px;
+}
+
+.label-row {
+	display: flex;
+	background: var(--background4, #4e4e4e);
+	border-radius: 4px;
+	cursor: pointer;
+	width: 100%;
+	box-shadow: var(
+		--boxShadows-action-secondary,
+		0px 0.5px 1px 0px #000,
+		0px 0.5px 0.5px 0px rgba(255, 255, 255, 0.12) inset
+	);
+}
+
+.label-row--wrapper {
+	display: flex;
+	gap: 4px;
+	width: 100%;
+	flex: 1;
+	align-self: stretch;
+	justify-content: space-between;
+}
+
+.input-wrapper {
+	flex: 1;
+}
+
+.controls .input {
+	width: 100%;
+	padding: 4px;
+	background: var(--background1);
+	border: 1px solid var(--border2);
+	border-radius: 4px;
+	color: var(--text1, #ebebeb);
+	font-size: 11px;
+	font-weight: 400;
+	line-height: 16px;
+	outline: none;
+	box-shadow: 0px 1px 1px -1px rgba(0, 0, 0, 0.13) inset;
+}
+
+.controls .input--hex {
+	width: 80px;
+	text-align: left;
+}
+
+.controls .input--number {
+	width: 30px;
+	text-align: center;
+}
+
+.controls .label {
+	color: var(--text1, #ebebeb);
+	font-size: 11px;
+	font-weight: 400;
+	line-height: 16px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.controls .label--clickable {
+	flex: 1;
+	padding: 4px;
+	cursor: pointer;
+}
+
+.control-group--main .input--number {
+	width: 100%;
+}

@@ -1,0 +1,149 @@
+.labels.link {
+	cursor: pointer;
+	padding: 4px;
+	border-radius: 4px;
+}
+
+.labels.link-hover:hover:not(.disabled),
+.labels.link-hover.is-busy {
+	background-color: rgba(255, 255, 255, 0.05);
+	border-radius: 4px;
+}
+
+.labels .target .message {
+	font-weight: 500;
+	font-size: 11px;
+	word-break: normal;
+}
+
+.labels.disabled,
+.labels.link.is-busy {
+	opacity: 0.75;
+	cursor: not-allowed;
+}
+
+.labels {
+	display: block;
+}
+
+.labels .loading,
+.label-popup .loading {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Label-specific styles */
+.label-popup.disabled {
+	opacity: 0.75;
+	cursor: not-allowed;
+}
+
+.label-popup .target:has(.item) {
+	display: flex;
+}
+
+.label-popup .tooltip:has(.popup) {
+	border-radius: none;
+	background: none;
+	box-shadow: none;
+	z-index: 9999999;
+	width: max-content;
+}
+
+.dropdown-label {
+	width: 100%;
+}
+
+.dropdown-label.active .labels:not(.dropdown-label [role='tooltip'] .labels) {
+	color: rgb(138, 194, 255);
+	background: rgba(0, 132, 255, 0.18);
+	cursor: pointer;
+	border-radius: 4px;
+	display: grid !important;
+	grid-template-columns: 1fr max-content !important;
+}
+
+/* Svelte's scoped `*` selector — constrained to this component's roots now that
+   scoping is gone, so it doesn't leak into the whole document. */
+.labels,
+.labels *,
+.label-popup,
+.label-popup * {
+	font-style: normal;
+	line-height: 16px;
+	letter-spacing: -0.115px;
+	color: var(--actionPrimaryText);
+}
+
+/* Popup Wrapper Styles - matching original popup design */
+.popup-wrapper {
+	display: flex;
+	width: 200px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	border-radius: 4px;
+	border: 1px solid var(--border1, #363636);
+	background: var(--background3, #353535);
+	height: max-content;
+	min-height: 80px;
+}
+
+.popup-header {
+	display: grid;
+	grid-template-columns: max-content 1fr max-content;
+	padding: 8px;
+	align-items: center;
+	cursor: pointer;
+	gap: 8px;
+	align-self: stretch;
+	border-bottom: 1px solid var(--border1, #363636);
+}
+
+.popup-header:hover {
+	background-color: var(--hoverColor);
+}
+
+.popup-title {
+	color: var(--text1, #f5f5f5);
+	font-size: 11px;
+	font-style: normal;
+	font-weight: 500;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.popup-subtitle {
+	color: var(--text2, #bdbdbd);
+	font-size: 11px;
+	font-style: normal;
+	font-weight: 500;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.popup-description {
+	display: flex;
+	padding: 8px;
+	align-items: center;
+	gap: 12px;
+	align-self: stretch;
+	height: max-content;
+	min-height: 48px;
+}
+
+.popup-description span {
+	color: var(--text2, #bdbdbd);
+
+	font-size: 11px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex: 1 0 0;
+}

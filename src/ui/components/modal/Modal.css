@@ -1,0 +1,79 @@
+.modal-overlay {
+	inset: 0;
+	border: none;
+	padding: 0;
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+	border-radius: var(--border-radius);
+	background: var(--background2);
+	color: var(--text1);
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-height: 0;
+}
+
+/*
+ * Source scoped a bare `button` selector to the component; Svelte scoping is
+ * gone, so the close button gets an explicit class instead.
+ */
+.modal-content .modal-close-button {
+	border: none;
+	user-select: none;
+	width: 24px;
+	padding: 0px 4px;
+	font-size: inherit;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 24px;
+	border-radius: 4px;
+	color: var(--text2, rgb(171, 171, 171));
+	background: transparent;
+	box-sizing: border-box;
+	box-shadow: none;
+	align-self: center;
+	cursor: pointer;
+}
+
+.modal-content .modal-close-button:hover {
+	opacity: 0.8;
+}
+
+.header-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid var(--border1);
+	gap: 4px;
+	width: 100%;
+}
+
+.prevent-overlay-close {
+	cursor: progress;
+}
+
+.modal-body {
+	flex: 1;
+	min-height: 0;
+	overflow: auto;
+}
+
+.modal-footer {
+	border-top: 1px solid var(--border1);
+}
+
+.footer-buttons {
+	display: flex;
+	gap: 8px;
+	justify-content: flex-end;
+}

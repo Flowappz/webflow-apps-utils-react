@@ -1,0 +1,5 @@
+.iframe {
+	border: none;
+	border-radius: var(--border-radius, 4px);
+	background: var(--text2);
+}

@@ -1,0 +1,11 @@
+.select-msg-wrap .info svg {
+	color: var(--yellowIcon, #f3c831);
+	width: var(--Spacing-16, 16px);
+	height: var(--Spacing-16, 16px);
+}
+.select-msg-wrap {
+	display: flex;
+	align-items: center;
+	gap: 3px;
+	font-size: 11.5px;
+}
